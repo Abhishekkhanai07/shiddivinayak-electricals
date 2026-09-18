@@ -31,13 +31,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Show contact-form errors passed back from contact.php via ?error=
-  const errParam = new URLSearchParams(window.location.search).get('error');
+  // Contact form delivery is handled client-side by EmailJS.
   const errBox = document.getElementById('formError');
-  if (errParam && errBox) {
-    errBox.textContent = errParam;
-    errBox.style.display = 'block';
-    errBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    const emailjsPublicKey = 'xZIQ8siBezx-2hCAD';
+    const emailjsService = contactForm.dataset.emailjsService;
+    const emailjsTemplate = contactForm.dataset.emailjsTemplate;
+    const isPlaceholder = value => value?.startsWith('YOUR_');
+    if (window.emailjs && !isPlaceholder(emailjsPublicKey)) {
+      emailjs.init({ publicKey: emailjsPublicKey });
+    }
+    contactForm.addEventListener('submit', async event => {
+      event.preventDefault();
+
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitButton?.textContent || 'Send Message';
+      const honeypot = contactForm.querySelector('#website');
+      if (honeypot?.value) return;
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+      }
+      if (errBox) errBox.style.display = 'none';
+
+      try {
+        if (!window.emailjs || isPlaceholder(emailjsPublicKey) ||
+          isPlaceholder(emailjsService) || isPlaceholder(emailjsTemplate)) {
+          throw new Error('EmailJS is not configured.');
+        }
+        await emailjs.sendForm(
+          emailjsService,
+          emailjsTemplate,
+          contactForm
+        );
+        window.location.href = 'thank-you.html';
+      } catch (error) {
+        console.error('EmailJS contact form error:', error);
+        if (errBox) {
+          errBox.textContent = 'We could not send your message. Please try again or call us directly.';
+          errBox.style.display = 'block';
+          errBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        }
+      }
+    });
   }
 
   // Contact / newsletter forms — static demo
