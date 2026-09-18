@@ -1,0 +1,10 @@
+{
+  "name":"Shiddivinayak Electricals",
+  "short_name":"Shiddivinayak",
+  "start_url":"./",
+  "display":"standalone",
+  "lang":"en-IN",
+  "theme_color":"#0b1220",
+  "background_color":"#ffffff",
+  "icons":[{"src":"images/ganesh2.jpg","sizes":"512x512","type":"image/jpeg"}]
+}

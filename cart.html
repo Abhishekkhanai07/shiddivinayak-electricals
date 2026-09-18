@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart — Shiddivinayak Electricals</title>
+<meta name="description" content="Review your selected products from Shiddivinayak Electricals.">
+<meta name="author" content="Shiddivinayak Electricals">
+<meta name="robots" content="noindex,nofollow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="geo.region" content="IN-KA">
+<meta name="geo.placename" content="Solapur, Karnataka">
+<meta name="geo.position" content="16.269445;74.440237">
+<meta name="ICBM" content="16.269445, 74.440237">
+<meta property="og:title" content="Your Cart — Shiddivinayak Electricals">
+<meta property="og:description" content="Review your selected products from Shiddivinayak Electricals.">
+<meta property="og:site_name" content="Shiddivinayak Electricals">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/hero-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="images/hero-poster.jpg">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img src="images/ganesh2.jpg" alt="Shiddivinayak Electricals emblem">
+      <span class="brand-text"><span class="name">Shiddivinayak Electricals</span><span class="tagline">SINCE 2010 · ELECTRICAL &amp; ELECTRONICS</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="repairs.html">Repairs</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:+919900675733" class="call-chip"><span class="dot"></span>Call: +91 99006 75733</a>
+      <a href="cart.html" class="btn btn-outline btn-sm">Cart</a>
+      <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="scrim"></div>
+<aside class="mobile-menu">
+  <div class="mobile-menu-head">
+    <span class="brand"><img src="images/ganesh2.jpg" alt=""><span class="brand-text"><span class="name">Shiddivinayak</span></span></span>
+    <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="repairs.html">Repairs</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="user-login.html">Login</a>
+</aside>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Cart</div>
+    <h1>Your Cart</h1>
+    <p>Review your items below — pay on pickup or delivery.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container cart-layout">
+    <div>
+      <div class="cart-row">
+        <img src="images/light.jpg" alt="LED Bulb">
+        <div>
+          <h4>9W LED Bulb</h4>
+          <p class="muted">Qty: 2</p>
+          <div class="qty-box"><button>−</button><span>2</span><button>+</button></div>
+        </div>
+        <div style="text-align:right;"><strong style="font-family:var(--mono);">₹190</strong></div>
+      </div>
+      <div class="cart-row">
+        <img src="images/switch.jpg" alt="3-Pin Switch">
+        <div>
+          <h4>Modular Switch (2-Gang)</h4>
+          <p class="muted">Qty: 1</p>
+          <div class="qty-box"><button>−</button><span>1</span><button>+</button></div>
+        </div>
+        <div style="text-align:right;"><strong style="font-family:var(--mono);">₹145</strong></div>
+      </div>
+      <div class="cart-row">
+        <img src="images/wires.jpg" alt="Flexible Copper Wire">
+        <div>
+          <h4>Flexible Copper Wire (5m)</h4>
+          <p class="muted">Qty: 1</p>
+          <div class="qty-box"><button>−</button><span>1</span><button>+</button></div>
+        </div>
+        <div style="text-align:right;"><strong style="font-family:var(--mono);">₹180</strong></div>
+      </div>
+    </div>
+
+    <aside class="cart-summary">
+      <h3 style="margin-bottom:16px;">Order Summary</h3>
+
+      <div class="delivery-toggle">
+        <label class="delivery-option active">
+          <input type="radio" name="delivery" value="pickup" checked onchange="setDeliveryMode(this)">
+          <span class="opt-title">🏬 Store Pickup</span>
+          <span class="opt-sub">Ready in ~1 hour · Free</span>
+        </label>
+        <label class="delivery-option">
+          <input type="radio" name="delivery" value="delivery" onchange="setDeliveryMode(this)">
+          <span class="opt-title">🚚 Home Delivery</span>
+          <span class="opt-sub">Same day, within town · Free</span>
+        </label>
+      </div>
+
+      <div class="row"><span>Subtotal</span><b style="font-family:var(--mono);">₹515</b></div>
+      <div class="row"><span>Delivery</span><b id="deliveryFee">Free (local)</b></div>
+      <hr>
+      <div class="row total"><span>Total</span><b style="font-family:var(--mono);">₹515</b></div>
+      <a href="contact.html" class="btn btn-copper btn-block" style="margin-top:18px;">Proceed to Checkout</a>
+      <p style="font-size:.78rem;color:var(--ink-soft);margin-top:12px;text-align:center;">Pay by cash or UPI on pickup/delivery</p>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand"><img src="images/ganesh2.jpg" alt=""><span class="brand-text"><span class="name">Shiddivinayak Electricals</span></span></span>
+        <p>Your trusted neighbourhood electrical &amp; electronics shop — sales and repair, since 2010.</p>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><a href="shop.html">All Products</a></div>
+      <div class="footer-col"><h4>Repairs</h4><a href="repairs.html">All Services</a></div>
+      <div class="footer-col"><h4>Contact</h4><p>+91 99006 75733</p></div>
+    </div>
+    <div class="footer-bottom">© 2026 Shiddivinayak Electronic and Electrical Shop. All rights reserved.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919900675733?text=Hi%2C%20I%20have%20an%20enquiry%20from%20your%20website" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.4 7.6 9.1 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 20.2 12 8.2 8.2 0 0 1 12 20.2Z"/></svg>
+</a>
+<script src="js/main.js"></script>
+</body>
+</html>
